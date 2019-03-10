@@ -38,6 +38,7 @@ EXTRA_PATH_METADATA = {
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
            'pandoc_reader',
+           'pelican_comment_system',
            'post_stats',
            'related_posts',
            # 'render_math',
@@ -58,6 +59,14 @@ PANDOC_ARGS = [
   '--csl',
   './bib/language.csl'
 ]
+# pelican comment system options
+PELICAN_COMMENT_SYSTEM = True
+PELICAN_COMMENT_SYSTEM_DIR = './comments'
+PELICAN_COMMENT_SYSTEM_IDENTICON_DATA = ('author',)
+PELICAN_COMMENT_SYSTEM_IDENTICON_OUTPUT_PATH = 'img/identicon'
+PELICAN_COMMENT_SYSTEM_IDENTICON_SIZE = 72
+PELICAN_COMMENT_SYSTEM_FEED = 'feeds/%s_comment.atom.xml'
+PELICAN_COMMENT_SYSTEM_FEED_ALL = 'feeds/comments.all.atom.xml'
 # render_math options
 # MATH_JAX = {'auto_insert': False, 'process_summary': True}
 # summary options
